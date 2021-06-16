@@ -1,0 +1,16 @@
+<app-toolbar></app-toolbar>
+
+<mat-drawer-container class="drawer-container" autosize>
+    <mat-drawer #drawer 
+                class="drawer global-background-color" 
+                [opened]="this.global.showSidePanel" 
+                hasBackdrop="false" 
+                mode="side">
+        <app-side-panel></app-side-panel>
+    </mat-drawer>
+  
+    <div class="content-container">
+        <app-main></app-main>
+    </div>
+</mat-drawer-container>
+
