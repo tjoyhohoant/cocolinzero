@@ -60,10 +60,25 @@
     background-color: rgba(93, 143, 236, 0.4);
 }
 .home-quote-4 {
+    font-size: 30px;
 
+    grid-column: 6 / 9;
+    grid-row: 3 / 4;
+    justify-self: center;
+
+    background-color: rgba(194, 243, 103, 0.4);
 }
 .home-quote-5 {
+    font-size: 30px;
+    line-height: 1.1;
 
+    grid-column: 7 / 9;
+    grid-row: 10 / 11;
+    justify-self: center;
+    // text-align: center;
+
+    color: rgb(54, 54, 54);
+    background-color: rgba(154, 143, 250, 0.3);
 }
 .home-quote-6 {
 
