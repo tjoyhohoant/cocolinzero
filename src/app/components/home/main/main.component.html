@@ -23,8 +23,14 @@
                 <span style="font-size: 45px; color: black;">Big</span>
             </span>
 
-            <span *ngIf="this.global.hiddenFunctionToggleChecked" class="hidden-quote-1">
-                I Love You
+            <span *ngIf="this.global.hiddenFunctionToggleChecked" 
+                    (mouseenter)="showLove=true" 
+                    (mouseleave)="showLove=false"
+                    class="hidden-quote-1">
+                I 
+                <span *ngIf="!showLove">Miss</span> 
+                <span *ngIf="showLove">Love</span>
+                You
             </span>
         </div>
     

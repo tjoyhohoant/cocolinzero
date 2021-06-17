@@ -8,6 +8,8 @@ import { Global } from 'src/app/services/global.service';
 })
 export class MainComponent implements OnInit {
 
+  showLove = false;
+  
   constructor(
     public global: Global,
   ) { }
