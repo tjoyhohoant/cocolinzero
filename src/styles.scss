@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Exo:wght@300&display=swap');
 
-html, body { height: 100%; }
+html, body { height: 100%; overflow-y: hidden; }
 body { margin: 0; font-family: 'Exo', sans-serif; }
 
 .global-background-color {
