@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { MessageBoardComponent } from './components/message-board/message-board.component';
@@ -34,6 +36,7 @@ import { ApplicationComponent } from './components/application/application.compo
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
@@ -41,6 +44,7 @@ import { ApplicationComponent } from './components/application/application.compo
     MatSidenavModule,
     MatButtonModule,
     MatListModule,
+    MatSlideToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

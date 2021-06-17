@@ -22,4 +22,9 @@ export class ToolbarComponent implements OnInit {
     (<any>this.button).color = this.global.showSidePanel ? 'accent' : 'primary';
   }
 
+  slideToggle(): void {
+    this.global.hiddenFunctionToggleChecked = !this.global.hiddenFunctionToggleChecked;
+    console.log(this.global.hiddenFunctionToggleChecked);
+  }
+
 }

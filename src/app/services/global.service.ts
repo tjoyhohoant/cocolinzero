@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class Global {
 
   public showSidePanel = false;
+  public hiddenFunctionToggleChecked = false;
 
   constructor() { }
 }

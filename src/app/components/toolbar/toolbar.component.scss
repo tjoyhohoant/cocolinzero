@@ -1,3 +1,18 @@
 .colored_icon {
     color:lightcoral;
 }
+
+.toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.toggle {
+    float: right;
+}
+
+.middle-filler {
+    width: 90vw;
+    // background-color: blanchedalmond;
+}

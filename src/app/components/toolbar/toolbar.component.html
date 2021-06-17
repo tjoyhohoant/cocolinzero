@@ -1,6 +1,7 @@
-<mat-toolbar class='global-background-color'>
+<mat-toolbar class='global-background-color toolbar'>
     <button mat-icon-button color="primary" (click)="toggleSidePanel()" #button>
         <mat-icon>more_vert</mat-icon>
     </button>
-    <!-- <span>Kanban Fire</span> -->
+    <span class="middle-filler"></span>
+    <mat-slide-toggle class="toggle" (click)="slideToggle()"></mat-slide-toggle>
 </mat-toolbar>
