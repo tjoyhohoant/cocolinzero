@@ -3,5 +3,12 @@
         <mat-icon>more_vert</mat-icon>
     </button>
     <span class="middle-filler"></span>
-    <mat-slide-toggle class="toggle" (click)="slideToggle()"></mat-slide-toggle>
+    <div class="mat-tools">
+        <mat-slider [min]="this.global.sliderMin" 
+                    [max]="this.global.sliderMax"
+                    (input)="onInputChange($event)"
+                    (change)="checkSliderValue($event)">
+        </mat-slider>
+        <mat-slide-toggle *ngIf="showHiddenToggle" color="primary" class="toggle" (click)="slideToggle()"></mat-slide-toggle>
+    </div>
 </mat-toolbar>

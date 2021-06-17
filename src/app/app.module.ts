@@ -12,6 +12,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSliderModule } from '@angular/material/slider';
+
 
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { MessageBoardComponent } from './components/message-board/message-board.component';
@@ -45,6 +47,7 @@ import { ApplicationComponent } from './components/application/application.compo
     MatButtonModule,
     MatListModule,
     MatSlideToggleModule,
+    MatSliderModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
