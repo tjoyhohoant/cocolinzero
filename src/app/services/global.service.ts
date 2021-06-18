@@ -5,16 +5,22 @@ import { Injectable } from '@angular/core';
 })
 export class Global {
 
+  // side panel 
   public showSidePanel = false;
 
+  // toolbar toggle
   public showHiddenToggle = false;
   public hiddenFunctionToggleChecked = false;
 
+  // toolbar slider
+  public displayQuotes = [
+    true, 
+    false, false, false, false, false,
+    false, false, false, false, false,
+  ];
   public sliderMin = 0;
-  public sliderMax = 4;
-  public sliderValue = 1;
-
-  public displayQuotes = [true, false, false, false, false, false];
+  public sliderMax = 10; //this.displayQuotes.length - 1;
+  public sliderValue = 1; // slider current value
 
   constructor() { }
 

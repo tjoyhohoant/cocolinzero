@@ -2,10 +2,13 @@
 
     <div class="bg-img-container">
         <div class="text-content">
+            <!-- quote 0 is always displayed -->
             <span class="home-quote-0">
                 <span>永遠相信</span><br>
                 <span>美好的事情即將發生</span>
             </span>
+
+            <!-- display quotes based on slider value -->
             <span *ngIf="this.global.displayQuotes[1]" class="home-quote-1">
                 <span style="font-size: 20px; font-weight: 1;">Hey</span><br>
                 Coco
@@ -14,15 +17,53 @@
                 勇往直前
             </span>
             <span *ngIf="this.global.displayQuotes[3]" class="home-quote-3">
-                Believe In Yourself
+                Stay Humble
             </span>
             <span *ngIf="this.global.displayQuotes[4]" class="home-quote-4">
-                Work<br> 
+                獨<br>
+                一<br>
+                無<br>
+                二
+                <!-- Work<br> 
                 Hard<br>
                 Dream<br> 
-                <span style="font-size: 45px; color: black;">Big</span>
+                <span style="font-size: 45px; color: black;">Big</span> -->
             </span>
+            <span *ngIf="this.global.displayQuotes[5]" class="home-quote-5">
+                Believe In Yourself
+            </span>
+            <span *ngIf="this.global.displayQuotes[6]" class="home-quote-6">
+                把握當下
+            </span>
+            <span *ngIf="this.global.displayQuotes[7]" class="home-quote-7">
+                你就是你世界的中心
+            </span>
+            <span *ngIf="this.global.displayQuotes[8]" class="home-quote-8">
+                Be Kind
+            </span>
+            <span *ngIf="this.global.displayQuotes[9]" class="home-quote-9">
+                Work Hard
+                <span class="global-background-color">
+                    &nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;
+                </span>
+                <br>
+                <span class="global-background-color">
+                    &nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;
+                </span>
+                Dream Big
+            </span>
+            <span *ngIf="this.global.displayQuotes[10]" class="home-quote-10">
+                致 &nbsp; CutiePie
+            </span>
+            <!-- <span *ngIf="this.global.displayQuotes[11]" class="home-quote-11">
+                致 &nbsp;&nbsp; CutiePie
+            </span> -->
 
+            <!-- hidden quote; display when hidden toggle is active -->
             <span *ngIf="this.global.hiddenFunctionToggleChecked" 
                     (mouseenter)="showLove=true" 
                     (mouseleave)="showLove=false"
