@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "cocolin-c1411": {
+      "hosting": {
+        "cocolin": [
+          "cocolin-c1411"
+        ]
+      }
+    }
+  }
+}
