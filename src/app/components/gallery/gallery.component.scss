@@ -13,26 +13,47 @@
   
     // background-color: blanchedalmond;
 
-    opacity: 0.7;
+    position: relative;
+    opacity: 0.4;
+    z-index: -2;
+}
 
+.center-text {
+    font-size: 60px;
+    font-family: 'Exo', sans-serif;
+
+    position: absolute;
+    z-index: -1;
+
+    text-align: center;
+    width: 400px;
+    // height: 50px;
+
+    top: 45%;
+    left: 50%;
+    margin-left: -200px; /* margin is -0.5 * dimension */
+    z-index: -1;
+
+    // background-color: wheat;
 }
 
 .content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.flex-filler {
-    width: 15vw;
-    // background-color: blanchedalmond;
     
 }
 
+.flex-filler {
+    //width: 15%;
+    background-color: blanchedalmond;
+}
+
 .tab-group {
-    width: 70%;
+    width: 70vw;
 }
 
 .image-container {
-    height: 70vh;
+    height: 94vh;
+
 }
