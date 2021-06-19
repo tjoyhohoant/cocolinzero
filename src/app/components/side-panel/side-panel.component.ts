@@ -25,7 +25,7 @@ export class SidePanelComponent implements OnInit {
   }
 
   navigate(link): void {
-
+    this.router.navigate(['/overview/'+link]);
   }
 
 }

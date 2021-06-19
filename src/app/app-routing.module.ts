@@ -5,6 +5,7 @@ import { ApplicationComponent } from './components/application/application.compo
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { MainComponent } from './components/home/main/main.component';
 import { MessageBoardComponent } from './components/message-board/message-board.component';
+import { WishListComponent } from './components/wish-list/wish-list.component';
 
 
 const routes: Routes = [
@@ -14,7 +15,7 @@ const routes: Routes = [
       { path: 'home', component: MainComponent },
       { path: 'message', component: MessageBoardComponent },
       { path: 'gallery', component: GalleryComponent },
-
+      { path: 'wishlist', component: WishListComponent },
     ] 
   },
   { path: '', redirectTo: '/overview/home', pathMatch: 'full' }

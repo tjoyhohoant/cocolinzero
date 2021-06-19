@@ -3,6 +3,7 @@
         <mat-icon>more_vert</mat-icon>
     </button>
     <span class="middle-filler"></span>
+    <span class="end-filler" *ngIf="!showSlider"></span>
     <div class="mat-tools" *ngIf="showSlider">
         <span class="slide-me">Slide Me</span>
         <mat-slider [min]="this.global.sliderMin" 

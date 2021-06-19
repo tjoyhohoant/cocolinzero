@@ -23,6 +23,7 @@ export class ToolbarComponent implements OnInit {
       if(val instanceof NavigationEnd) {
         let path = val.urlAfterRedirects;
         this.showSlider = (path === '/overview/home');
+        this.showHiddenToggle = false;
       }
     });
   }
