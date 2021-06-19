@@ -17,6 +17,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatTabsModule } from '@angular/material/tabs';
 
 
 import { GalleryComponent } from './components/gallery/gallery.component';
@@ -52,6 +53,8 @@ import { ApplicationComponent } from './components/application/application.compo
     MatListModule,
     MatSlideToggleModule,
     MatSliderModule,
+    MatTabsModule,
+
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
   ],

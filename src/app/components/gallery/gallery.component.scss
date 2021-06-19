@@ -1,0 +1,38 @@
+.container {
+    height: 100%;
+}
+
+.bg-img-container {
+    height: 100%;
+
+    background-image: url("/assets/img/cyberpunk.png");
+    background-size: cover;
+    background-attachment:fixed;
+    background-position: center; 
+    background-repeat: no-repeat;
+  
+    // background-color: blanchedalmond;
+
+    opacity: 0.7;
+
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flex-filler {
+    width: 15vw;
+    // background-color: blanchedalmond;
+    
+}
+
+.tab-group {
+    width: 70%;
+}
+
+.image-container {
+    height: 70vh;
+}
