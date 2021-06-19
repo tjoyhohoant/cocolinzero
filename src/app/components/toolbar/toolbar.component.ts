@@ -24,6 +24,7 @@ export class ToolbarComponent implements OnInit {
         let path = val.urlAfterRedirects;
         this.showSlider = (path === '/overview/home');
         this.showHiddenToggle = false;
+        this.global.showSidePanel = false;
       }
     });
   }
