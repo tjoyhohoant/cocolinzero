@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { MatSliderChange } from '@angular/material/slider';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { Global } from 'src/app/services/global.service';
 
 @Component({
@@ -11,13 +12,23 @@ export class ToolbarComponent implements OnInit {
 
   @ViewChild('button') button: ElementRef;
 
+  showSlider = true;
   showHiddenToggle = false;
 
   constructor(
     public global: Global,
-  ) { }
+    private router: Router,
+  ) { 
+    router.events.subscribe((val) => {
+      if(val instanceof NavigationEnd) {
+        let path = val.urlAfterRedirects;
+        this.showSlider = (path === '/overview/home');
+      }
+    });
+  }
 
   ngOnInit(): void {
+    
   }
 
   toggleSidePanel(): void {
@@ -26,14 +37,13 @@ export class ToolbarComponent implements OnInit {
   }
 
   onInputChange(event: MatSliderChange): void {
-    console.log("This is emitted as the thumb slides");
-    console.log(event.value);
+    // console.log(event.value);
     this.global.sliderValue = event.value;
     this.global.toggleQuotes();
   }
 
   checkSliderValue(event: MatSliderChange): void {
-    console.log('slider val: ' + event.value);
+    // console.log('slider val: ' + event.value);
     this.showHiddenToggle = (event.value === this.global.sliderMax);
     if (!this.showHiddenToggle) this.global.hiddenFunctionToggleChecked = false;
   }
