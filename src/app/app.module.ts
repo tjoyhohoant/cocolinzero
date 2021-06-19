@@ -18,28 +18,34 @@ import { MatListModule } from '@angular/material/list';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatInputModule } from '@angular/material/input';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 import { GalleryComponent } from './components/gallery/gallery.component';
-import { MessageBoardComponent } from './components/message-board/message-board.component';
 import { WishListComponent } from './components/wish-list/wish-list.component';
 import { MainComponent } from './components/home/main/main.component';
 import { QuotesComponent } from './components/home/quotes/quotes.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { SidePanelComponent } from './components/side-panel/side-panel.component';
 import { ApplicationComponent } from './components/application/application.component';
+import { AuthChatroomDialogComponent } from './components/dialog/auth-chatroom-dialog/auth-chatroom-dialog.component';
+import { HappyBirthdayDialogComponent } from './components/dialog/happy-birthday-dialog/happy-birthday-dialog.component';
+import { ChatroomComponent } from './components/chatroom/chatroom.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GalleryComponent,
-    MessageBoardComponent,
     WishListComponent,
     MainComponent,
     QuotesComponent,
     ToolbarComponent,
     SidePanelComponent,
     ApplicationComponent,
+    AuthChatroomDialogComponent,
+    HappyBirthdayDialogComponent,
+    ChatroomComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,6 +60,8 @@ import { ApplicationComponent } from './components/application/application.compo
     MatSlideToggleModule,
     MatSliderModule,
     MatTabsModule,
+    MatInputModule,
+    MatDialogModule,
 
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,

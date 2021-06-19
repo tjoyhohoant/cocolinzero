@@ -8,9 +8,10 @@
             Home
         </div>
 
-        <div class="link" (click)="navigate('message')">
+        <div class="link" (click)="navigate('unlock')">
             <button mat-icon-button>
-                <mat-icon>message</mat-icon>
+                <mat-icon *ngIf="!this.global.chatRoomUnlocked">message</mat-icon>
+                <mat-icon *ngIf="this.global.chatRoomUnlocked">lock_open</mat-icon>
             </button>
             Message
         </div>

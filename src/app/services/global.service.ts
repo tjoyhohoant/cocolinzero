@@ -22,6 +22,10 @@ export class Global {
   public sliderMax = 10; //this.displayQuotes.length - 1;
   public sliderValue = 1; // slider current value
 
+  // chatroom
+  public chatRoomUnlocked = false;
+
+  
   constructor() { }
 
   toggleQuotes(): void {
