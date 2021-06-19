@@ -7,17 +7,22 @@
         <div class="flex-filler"></div>
         <mat-tab-group mat-align-tabs="center" class="tab-group">
             <mat-tab label="New York Trip" class="tab">
-                <div class="image-grid">
-                    Content 1
+                <br>
+                <div class="img-grid">
+                    <div *ngFor="let link of newYorkCollection" style="background-image: url('/assets/img/new-york-trip/{{link}}')" class="img-square">
+                        <!-- <img src="{{link}}"> -->
+                    </div>
                 </div>
+                <div class="gallery-footer"></div>
+
             </mat-tab>
             <mat-tab label="Second" class="tab">
-                <div class="image-grid">
+                <div class="img-grid">
                     Content 2
                 </div>
             </mat-tab>
             <mat-tab label="Third" class="tab">
-                <div class="image-grid">
+                <div class="img-grid">
                     Content 3
                 </div>
             </mat-tab>
