@@ -41,7 +41,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
+    height: 100vh;
 }
 
 .flex-filler {
@@ -53,7 +53,7 @@
     width: 70vw;
 }
 
-.image-container {
-    height: 94vh;
+.image-grid {
+    // height: 94vh;
 
 }
