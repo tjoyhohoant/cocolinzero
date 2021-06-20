@@ -22,7 +22,7 @@ export class FirestoreService {
             if (this.global.codes.includes(this.roomCode)) {
                 this.items = this.store.collection('chatrooms')
                                        .doc(this.roomCode)
-                                       .collection('messages', ref => ref.orderBy('createdAt').limit(25))
+                                       .collection('messages', ref => ref.orderBy('createdAt', 'desc').limit(25))
                                        .valueChanges();
             }
         });

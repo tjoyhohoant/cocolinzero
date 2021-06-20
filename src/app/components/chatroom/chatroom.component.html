@@ -1,17 +1,38 @@
 <div class="container">
-    <div class="test-container">
-        <ul>
-            <li class="text" *ngFor="let msg of chatHistory | async">
-            {{msg.text}}
-            </li>
-        </ul>
-    </div>
-    <div>
-        <mat-form-field class="form">
-            <mat-label>Message</mat-label>
-            <input matInput #message maxlength="256" placeholder="Enter message here..." [(ngModel)]="composedMsg">
-        </mat-form-field>
-        <button type="submit" (click)="sendMessage()">Enter</button>
 
+    <div class="bg-img-container"></div>
+
+    <div class="header"></div>
+
+    <div class="chat-window-container">
+        <div class="chat-window">
+            <p class="text" 
+               *ngFor="let msg of (chatHistory | async)?.slice().reverse()"
+               [ngClass]="{
+                    'user-0': msg.role === roles[0], 
+                    'user-1': msg.role === roles[1], 
+                    'user-none': msg.role === undefined
+                }"
+            >
+                {{msg.text}}
+            </p>
+            
+        </div>
     </div>
+
+    <div class="input-container">
+        <mat-form-field class="form" appearance="none">
+            <input matInput 
+                   #message 
+                   maxlength="256" 
+                   placeholder="Enter Message Here..." 
+                   (keydown.enter)="sendMessage()" 
+                   [(ngModel)]="composedMsg">
+        </mat-form-field>
+        <button class="submit-button" (click)="sendMessage()">
+            <mat-icon [ngStyle]="{'color':'white'}">send</mat-icon>
+        </button>
+            
+    </div>
+    
 </div>
