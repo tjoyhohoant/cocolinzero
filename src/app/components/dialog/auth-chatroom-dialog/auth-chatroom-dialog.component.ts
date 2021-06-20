@@ -10,13 +10,17 @@ import { Global } from 'src/app/services/global.service';
 })
 export class AuthChatroomDialogComponent implements OnInit {
 
+  // the value inputted in the mat input
   public value;
+
+  // store this in firestore 
   private codes = [
     '7667',
     '0620',
     '0627'
   ];
 
+  // set to true when user enters incorrect code
   public showErrorMsg = false;
 
   constructor(

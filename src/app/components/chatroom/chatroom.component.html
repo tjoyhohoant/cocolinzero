@@ -1,1 +1,17 @@
-<p>chatroom works!</p>
+<div class="container">
+    <div class="test-container">
+        <ul>
+            <li class="text" *ngFor="let item of items | async">
+            {{item.text}}
+            </li>
+        </ul>
+    </div>
+    <div>
+        <mat-form-field class="form">
+            <mat-label>Message</mat-label>
+            <input matInput #message maxlength="256" placeholder="Enter message here..." [(ngModel)]="composedMsg">
+        </mat-form-field>
+        <button type="submit" (click)="sendMessage()">Enter</button>
+
+    </div>
+</div>
