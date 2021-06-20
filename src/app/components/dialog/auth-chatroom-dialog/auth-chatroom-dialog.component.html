@@ -1,6 +1,7 @@
 <div class="container">
+    <h3 class="header">Enter 4-Digit Pin</h3>
     <mat-form-field class="form">
-        <mat-label>Enter 4-Digit Pin</mat-label>
+        <!-- <mat-label>Enter 4-Digit Pin</mat-label> -->
         <input matInput #pin maxlength="4" placeholder="" (keydown.enter)="onEnter()" [(ngModel)]="value">
         <mat-hint align="end">{{pin.value.length}} / 4</mat-hint>
         <span *ngIf="showErrorMsg" class="error">Incorrect pin.</span>

@@ -1,6 +1,8 @@
-import { Component, ElementRef, OnInit, Renderer2, ViewChild, AfterViewInit} from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild, AfterViewInit } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router, RouterEvent } from '@angular/router';
 import { Observable } from 'rxjs';
+import { filter } from 'rxjs/operators';
+
 import { FirestoreService } from 'src/app/services/firebase/firestore.service';
 import { MatDialog } from '@angular/material/dialog';
 
@@ -24,15 +26,22 @@ export class ChatroomComponent implements OnInit, AfterViewInit {
         public firestoreService: FirestoreService,
         public global: Global,
         public dialog: MatDialog,
+        private router: Router,
         private renderer: Renderer2,
     ) { }
 
     ngOnInit(): void {
         this.renderMessages();
+        // this.router.events.subscribe((val) => {
+        //     if (val instanceof NavigationEnd) {
+        //         console.log('hi');
+        //         this.renderMessages();
+        //     }
+        // })
     }
 
     ngAfterViewInit(): void {
-        
+
     }
 
     renderMessages() {
