@@ -9,8 +9,8 @@
             <p class="text" 
                *ngFor="let msg of (chatHistory | async)?.slice().reverse()"
                [ngClass]="{
-                    'user-0': msg.role === roles[0], 
-                    'user-1': msg.role === roles[1], 
+                    'user-0': msg.role === this.global.roles[0], 
+                    'user-1': msg.role === this.global.roles[1], 
                     'user-none': msg.role === undefined
                 }"
             >
@@ -19,8 +19,18 @@
             
         </div>
     </div>
+    background-color: rgb(255, 170, 58);
 
-    <div class="input-container">
+    <div class="input-container" [ngClass]="{
+        'type-one-border': this.global.currRole === this.global.roles[0],
+        'type-two-border': this.global.currRole === this.global.roles[1]
+    }">
+        <button class="switch-role-button" (click)="openDialog()" [ngClass]="{
+            'type-one': this.global.currRole === this.global.roles[0],
+            'type-two': this.global.currRole === this.global.roles[1]
+        }">
+            <mat-icon [ngStyle]="{'color':'white'}">people</mat-icon>
+        </button>
         <mat-form-field class="form" appearance="none">
             <input matInput 
                    #message 
@@ -29,7 +39,10 @@
                    (keydown.enter)="sendMessage()" 
                    [(ngModel)]="composedMsg">
         </mat-form-field>
-        <button class="submit-button" (click)="sendMessage()">
+        <button class="submit-button" (click)="sendMessage()" [ngClass]="{
+            'type-one': this.global.currRole === this.global.roles[0],
+            'type-two': this.global.currRole === this.global.roles[1]
+        }">
             <mat-icon [ngStyle]="{'color':'white'}">send</mat-icon>
         </button>
             

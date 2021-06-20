@@ -29,6 +29,11 @@ export class Global {
     '0620',
     '0627'
   ];
+
+  // chatroom roles
+  public roles = ['coco', 'kaw'];
+  public currRole = 'coco';
+
   
   constructor() { }
 

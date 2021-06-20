@@ -20,6 +20,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatRadioModule } from '@angular/material/radio';
 
 
 import { GalleryComponent } from './components/gallery/gallery.component';
@@ -32,6 +33,7 @@ import { ApplicationComponent } from './components/application/application.compo
 import { AuthChatroomDialogComponent } from './components/dialog/auth-chatroom-dialog/auth-chatroom-dialog.component';
 import { HappyBirthdayDialogComponent } from './components/dialog/happy-birthday-dialog/happy-birthday-dialog.component';
 import { ChatroomComponent } from './components/chatroom/chatroom.component';
+import { SelectRoleDialogComponent } from './components/dialog/select-role-dialog/select-role-dialog.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,7 @@ import { ChatroomComponent } from './components/chatroom/chatroom.component';
     AuthChatroomDialogComponent,
     HappyBirthdayDialogComponent,
     ChatroomComponent,
+    SelectRoleDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,6 +65,7 @@ import { ChatroomComponent } from './components/chatroom/chatroom.component';
     MatTabsModule,
     MatInputModule,
     MatDialogModule,
+    MatRadioModule,
 
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,

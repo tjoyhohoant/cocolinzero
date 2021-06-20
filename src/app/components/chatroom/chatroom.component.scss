@@ -74,7 +74,8 @@ p {
     color: white;
 }
 .user-1 {
-    background: #FEE715FF;
+    // background: #FEE715FF;
+    background: rgb(255, 170, 58);
     color: #101820FF;
 }
 
@@ -86,7 +87,8 @@ p {
     margin-left: 35%;
     margin-top: 10px;
     background-color: cornsilk;
-    border: solid black 1px;
+    // border: solid black 1px;
+    // border: solid rgb(247, 88, 82) 1px;
 
     display: flex;
     flex-direction: row;
@@ -96,9 +98,18 @@ p {
     top: 80vh;
 }
 
+.switch-role-button {
+    // background-color: rgb(255, 170, 58);
+    width: 50px;
+
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 .form {
-    width: 75%;
+    width: 65%;
     // border-radius: 30px;
     // padding-top: 5px;
     padding-left: 10px;
@@ -106,13 +117,27 @@ p {
 }
 
 .submit-button {
-    // margin-top: 10px;
     width: 20%;
-    background-color: rgb(82, 115, 247);
     border: none;
-    // padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    // display: inline-block;
+    // background-color: rgb(247, 88, 82);
+    // background-color: rgb(82, 115, 247);
+}
+
+.type-one {
+    background-color: rgb(247, 88, 82);
+    color: white;
+}
+.type-one-border {
+    border: solid rgb(247, 88, 82) 1px;
+}
+
+.type-two {
+    background-color: rgb(247, 200, 82);
+    color: white;
+}
+.type-two-border {
+    border: solid rgb(247, 200, 82) 1px;
 }

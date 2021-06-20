@@ -2,9 +2,12 @@ import { Component, ElementRef, OnInit, Renderer2, ViewChild, AfterViewInit} fro
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { FirestoreService } from 'src/app/services/firebase/firestore.service';
+import { MatDialog } from '@angular/material/dialog';
 
 import firebase from 'firebase/app';
 import 'firebase/firestore';
+import { SelectRoleDialogComponent } from '../dialog/select-role-dialog/select-role-dialog.component';
+import { Global } from 'src/app/services/global.service';
 
 @Component({
     selector: 'app-chatroom',
@@ -17,17 +20,14 @@ export class ChatroomComponent implements OnInit, AfterViewInit {
     chatHistory: Observable<any[]>;
     composedMsg: string = '';
 
-    roles = ['coco', 'kaw'];
-    currRole = 'coco';
-
     constructor(
         public firestoreService: FirestoreService,
+        public global: Global,
+        public dialog: MatDialog,
         private renderer: Renderer2,
     ) { }
 
     ngOnInit(): void {
-        // query firebase to get chat messages
-        // display chat messages on html 
         this.renderMessages();
     }
 
@@ -44,7 +44,7 @@ export class ChatroomComponent implements OnInit, AfterViewInit {
 
         const data = {
             text: this.composedMsg,
-            role: this.currRole,
+            role: this.global.currRole,
             createdAt: firebase.firestore.FieldValue.serverTimestamp()
         };
         this.firestoreService.writeMessage(data);
@@ -60,8 +60,11 @@ export class ChatroomComponent implements OnInit, AfterViewInit {
         this.composedMsg = '';
     }
 
-    selectRole(index): void {
-        this.currRole = this.roles[index];
+    openDialog(): void {
+        const dialogRef = this.dialog.open(SelectRoleDialogComponent, {
+            width: '270px',
+            height: '230px'
+        });
     }
 
 }
