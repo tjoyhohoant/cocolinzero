@@ -24,7 +24,11 @@ export class Global {
 
   // chatroom
   public chatRoomUnlocked = false;
-
+  public codes = [
+    '7667',
+    '0620',
+    '0627'
+  ];
   
   constructor() { }
 

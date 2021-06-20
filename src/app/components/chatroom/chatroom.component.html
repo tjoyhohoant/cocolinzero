@@ -1,8 +1,8 @@
 <div class="container">
     <div class="test-container">
         <ul>
-            <li class="text" *ngFor="let item of items | async">
-            {{item.text}}
+            <li class="text" *ngFor="let msg of chatHistory | async">
+            {{msg.text}}
             </li>
         </ul>
     </div>
