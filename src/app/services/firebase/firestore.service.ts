@@ -18,16 +18,17 @@ export class FirestoreService {
         private chatroomStore: ChatroomStore
     ) { 
         this.chatroomStore.code.subscribe(value => {
-            console.log('roomcode ' + value);
             this.roomCode = value;
             if (this.global.codes.includes(this.roomCode)) {
-                this.items = this.store.collection('chatrooms').doc(this.roomCode).collection('messages').valueChanges();
+                this.items = this.store.collection('chatrooms')
+                                       .doc(this.roomCode)
+                                       .collection('messages', ref => ref.orderBy('createdAt').limit(25))
+                                       .valueChanges();
             }
         });
     }
 
     getMessages(): Observable<any[]> {
-        console.log(this.global.chatRoomUnlocked);
         return this.items;
     }
 
